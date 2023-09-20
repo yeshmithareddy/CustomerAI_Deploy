@@ -28,4 +28,4 @@ pyarrow<10.1.0,>=10.0.1
 
 s3fs==2023.9.0
 
-snowflake-ml==1.0.0
+snowflake.ml==1.0.0
