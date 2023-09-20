@@ -12,3 +12,6 @@ streamlit==1.11.0
 streamlit_option_menu==0.3.2
 streamlit-aggrid
 pyarrow<10.1.0,>=10.0.1
+s3fs==2023.9.0
+snowflake.ml-python
+snowflake-ml==1.0.0
