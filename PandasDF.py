@@ -22,7 +22,7 @@ snow_df_leastpath = session.table('CUSTOMERAI_DB.MAIN.VW_CHANNEL_DISPLAY_LEAST_P
 snow_df_q_matrix_csv = session.table('CUSTOMERAI_DB.MAIN.VW_CHANNEL_DISPLAY_MATRIX')
 # snow_df_salesai_bestpath1 = session.table('CUSTOMERAI_DB.MAIN.vw_salesai_bestpath1')
 snow_df_salesai_incompletepath = session.table('CUSTOMERAI_DB.MAIN.VW_CHANNEL_DISPLAY_INCOMPLETE_PATH')
-snow_df_dmd=session.table('CUSTOMERAI_DB.MAIN.VW_DEMAND_FORECAST_PREDICTION')
+snow_df_dmd=session.table('CUSTOMERAI_DB.MAIN.VW_DEMAND_PREDICTION')
 snow_df_prc=session.table('CUSTOMERAI_DB.MAIN.VW_PRICING_PREDICTION')
 
 
