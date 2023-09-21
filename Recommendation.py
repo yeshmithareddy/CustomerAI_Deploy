@@ -51,7 +51,7 @@ def Recommendation():
         
         session = Session.builder.configs(connection_parameters).create()
        
-        k=session.call('CUSTOMERAI_DB.MAIN.SP_RECOMMENDER',INPUT_PRODUCT)
+        k=session.call('CUSTOMERAI_DB.MAIN.SP_CUSTOMERAI_RECOMMENDER',INPUT_PRODUCT)
         col3.markdown("""
                 <p style="color:#00568D; padding:5px 15px; font-family:'Segoe UI'; font-size:20px;"><b>Recommendated Product
                 </b></p>
