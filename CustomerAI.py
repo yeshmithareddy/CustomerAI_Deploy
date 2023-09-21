@@ -185,10 +185,10 @@ elif page_selected == 'Summary':
 			segment_count = str(len(pd.unique(pd_df_lead_seg['segmentName'])))
 			customer_data = '79.0'
 			pd_df_nps_cust_wid1=pd_df_nps_cust.groupby(["Overall_NPS_Result"])["Overall_NPS_Result"].count()
-			pd_df_nps_cust_wid1['Detractors'] = pd_df_nps_cust_wid1.get('Detractors', 0)
-			pd_df_nps_cust_wid1['Promoters'] = pd_df_nps_cust_wid1.get('Promoters', 0)
-			pd_df_nps_cust_wid1['Passives'] = pd_df_nps_cust_wid1.get('Passives', 0)
-			overall_nps=str(round((pd_df_nps_cust_wid1['Promoters']-pd_df_nps_cust_wid1['Detractors'])*(100/(pd_df_nps_cust_wid1['Detractors']+pd_df_nps_cust_wid1['Promoters']+pd_df_nps_cust_wid1['Passives'])),2))
+			pd_df_nps_cust_wid1['Detractor'] = pd_df_nps_cust_wid1.get('Detractor', 0)
+			pd_df_nps_cust_wid1['promote'] = pd_df_nps_cust_wid1.get('promote', 0)
+			pd_df_nps_cust_wid1['Passive'] = pd_df_nps_cust_wid1.get('Passive', 0)
+			overall_nps=str(round((pd_df_nps_cust_wid1['promote']-pd_df_nps_cust_wid1['Detractor'])*(100/(pd_df_nps_cust_wid1['Detractor']+pd_df_nps_cust_wid1['promote']+pd_df_nps_cust_wid1['Passive'])),2))
 			products = str(count_of_products)
 
 			st.markdown("""
