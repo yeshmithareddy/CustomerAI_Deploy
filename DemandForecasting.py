@@ -38,8 +38,8 @@ def Demand():
         final_df=DF.loc[DF["CATEGORY"].isin(category)]
         final_df=DF.loc[DF["CATEGORY"]==category_selection]
         
-        result = DF[["STOCK_CODE","DEPARTMENT","CATEGORY","STOCK_NAME","LEAD_W4","LEAD_W5","LEAD_W6","NEXT_WEEK_PREDICTION"]]
-        fig = go.Figure(data=[go.Table(columnwidth=[1.2,2,2,2.4,2,2,2,2],header=dict(values=("<b>STOCK CODE<b>","<b>DEPARTMENT<b>","<b>CATEGORY<b>","<b>STOCK NAME<b>","<b>UNITS SOLD LEAD_W4<b>","<b>UNITS SOLD LEAD_W5<b>","<b>UNITS SOLD LEAD_W6<b>","<b>NEXT WEEK PREDICTION<b>"), fill_color='#00568D', font_color="#ffffff", align=['center'], line_color='#ffffff', font_size = 13,height=35),cells=dict(values=[DF.STOCK_CODE,DF.DEPARTMENT,DF.CATEGORY,DF.STOCK_NAME,DF.LEAD_W4,DF.LEAD_W5,DF.LEAD_W6,DF.NEXT_WEEK_PREDICTION],fill_color = [['white','lightgrey']*3200], align=['left'], font_size = 12))])
+        result = final_df[["STOCK_CODE","DEPARTMENT","CATEGORY","STOCK_NAME","LEAD_W4","LEAD_W5","LEAD_W6","NEXT_WEEK_PREDICTION"]]
+        fig = go.Figure(data=[go.Table(columnwidth=[1.2,2,2,2.4,2,2,2,2],header=dict(values=("<b>STOCK CODE<b>","<b>DEPARTMENT<b>","<b>CATEGORY<b>","<b>STOCK NAME<b>","<b>UNITS SOLD LEAD_W4<b>","<b>UNITS SOLD LEAD_W5<b>","<b>UNITS SOLD LEAD_W6<b>","<b>NEXT WEEK PREDICTION<b>"), fill_color='#00568D', font_color="#ffffff", align=['center'], line_color='#ffffff', font_size = 13,height=35),cells=dict(values=[result.STOCK_CODE,result.DEPARTMENT,result.CATEGORY,result.STOCK_NAME,result.LEAD_W4,result.LEAD_W5,result.LEAD_W6,result.NEXT_WEEK_PREDICTION],fill_color = [['white','lightgrey']*3200], align=['left'], font_size = 12))])
         
         fig.update_layout(autosize=False,width=998,height=350,margin=dict(l=0,r=0,b=0,t=0,pad=4), paper_bgcolor="#ffffff"
                 )
