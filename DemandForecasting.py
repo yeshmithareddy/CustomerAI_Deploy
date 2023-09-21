@@ -50,7 +50,7 @@ def Demand():
         with col1:
                 
             # Forecasting the Next Week Prediction
-            st.markdown('<h1 style="color: #00568D; font-size: 28px;">Forecasting of Next Week Sales</h1>', unsafe_allow_html=True)
+            st.markdown('<h1 style="color: #00568D; font-size: 28px;">Next Week Sales Forecast</h1>', unsafe_allow_html=True)
             frdf=DF[["CATEGORY","NEXT_WEEK_PREDICTION"]]
             frdf = pd.DataFrame(frdf.groupby(frdf["CATEGORY"])["NEXT_WEEK_PREDICTION"].sum()).reset_index()
             frdf.rename(columns={'NEXT_WEEK_PREDICTION': 'UNITS SOLD'}, inplace=True)
