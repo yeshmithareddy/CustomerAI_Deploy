@@ -35,6 +35,7 @@ def Demand():
         DF = RESULT.loc[RESULT["DEPARTMENT"]==dep_selection1]  
         category = np.sort(DF['CATEGORY'].unique()).tolist()
         category_selection = col_CATE.selectbox('Category', category,index=0)
+        final_df=DF.loc[DF["CATEGORY"].isin(category)]
         final_df=DF.loc[DF["CATEGORY"]==category_selection]
         
         result = DF[["STOCK_CODE","DEPARTMENT","CATEGORY","STOCK_NAME","LEAD_W4","LEAD_W5","LEAD_W6","NEXT_WEEK_PREDICTION"]]
