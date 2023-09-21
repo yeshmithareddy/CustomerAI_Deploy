@@ -617,13 +617,13 @@ elif page_selected == 'Summary':
 			c1=0
 			c2=0
 			c3=0
-			s=pd_df_nps_cust['Overall_NPS_Result'].tolist()
+			s=pd_df_nps_cust['Overall_NPS_Result']
 			for i in s:
-				if i=="Passives":
+				if i=="Passive":
 					c3=c3+1
-				if i=="Detractors":
+				if i=="Detractor":
 					c2=c2+1
-				if i=="Promoters":
+				if i=="promote":
 					c1=c1+1
 
 			l.append(c3)
