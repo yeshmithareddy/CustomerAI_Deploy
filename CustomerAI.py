@@ -13,14 +13,12 @@ from matplotlib.pyplot import figure
 from plotly.colors import n_colors
 import numpy as np
 from Behavioural_Modeling import Behavioural_Modeling
-from Recommendation import Recommendation
-from DemandForecasting import Demand
 from NPS_By_Product import NPS_By_Product
 from Customer_Insights import Customer_Insights
 from Channel_Attribution import Channel_Attribution
 from Customer_Satisfaction import Customer_Satisfaction
-from Pricing import Pricing
-from PandasDF import pd_df_rfm, pd_df_nps_cust, pd_df_lead_seg, pd_df_clv, pd_df_nps_cust,pd_df_lead_seg, pd_df_ncatr,pd_df_lsrr,pd_df_recomm,pd_df_dmd,pd_df_prc
+from Recommendation import Recommendation
+from PandasDF import pd_df_rfm, pd_df_nps_cust, pd_df_lead_seg, pd_df_clv, pd_df_nps_cust,pd_df_lead_seg, pd_df_ncatr,pd_df_lsrr,pd_df_recomm
 
 
 
@@ -31,7 +29,7 @@ st.image('custai.png',width =225)
 page_selected = option_menu(
 	            menu_title = None,
 	            options = ['Summary', 'Customer Insights', 'Segmentation','Channel Attribution',
-				'CSat','Product NPS', 'Recommendation','Demand Forecasting','Pricing'],
+				'CSat','Product NPS', 'Recommendation'],
 	            default_index = 0,
 	            icons=None,
 	            menu_icon=None,
@@ -40,7 +38,7 @@ page_selected = option_menu(
 
 	            
 	            "container": {"padding": "0!important", "background-color": "#fafafa"},
-	            # "icon": {"color": "orange", "font-size": "25px"},
+	            # "icon": {"color": "orange", "font-size": "20px"},
 	            "icon":{"display":"none"},
 	            "nav": {"background-color":"#f2f5f9"},
 	            "nav-link": {"font-size": "12px",
@@ -72,10 +70,6 @@ elif page_selected == 'Product NPS':
 	NPS_By_Product()
 elif page_selected == 'Recommendation':
 	Recommendation()
-elif page_selected == 'Demand Forecasting':
-	Demand()
-elif page_selected == 'Pricing':
-	Pricing()
 elif page_selected == 'Summary':
 
 	with open('style_sum.css') as f:
@@ -806,7 +800,7 @@ elif page_selected == 'Summary':
 
 	with fourth_row:
 		NPS_Trend_Analysis,a = st.columns([1000,1])
-		# NPS_Trend_Analysis = st.column()
+		
 
 		with NPS_Trend_Analysis:
 			st.markdown("""
